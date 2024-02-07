@@ -1,12 +1,12 @@
 package rk.solidprinciples.lsp
 
-// Violating LSP
-open class Bird {
-    open fun fly() {}
+open class Bird {}
+open class FlyingBird : Bird() {
+    fun fly() {}
 }
 
 // Parrot can fly.
-class Parrot : Bird() {}
+class Parrot : FlyingBird() {}
 
 // Hen can't fly.
 class Hen : Bird() {}
