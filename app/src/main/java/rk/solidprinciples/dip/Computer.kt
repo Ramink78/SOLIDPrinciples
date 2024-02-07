@@ -1,12 +1,15 @@
 package rk.solidprinciples.dip
 
-// Violation DIP
+
 // Consider RaminOS is a new Operation System
-class RaminOS(processor: IntelProcessor) {
+class RaminOS(processor: Processor) {
     // some methods
 }
 
-class IntelProcessor
+open class Processor
+class IntelProcessor : Processor()
+class AppleProcessor : Processor()
+class AMDProcessor : Processor()
 
-// RaminOS Only support Intel processors
-// What about AMD's processors or Apple's processors?
+// Now RaminOS supports any type of processor
+
